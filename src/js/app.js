@@ -2,6 +2,32 @@
 const menuDropdown = document.querySelector('menu');
 const menuButton = document.querySelector('.menu-button');
 
+
+
+
+//Dropdown meny - 
+const sectionFilter = document.querySelector('.section-filter');
+let sectionContent = document.querySelectorAll('.section-content');
+let linksMenu = document.querySelectorAll('.a-menu');
+
+for(let i = 0; i < linksMenu.length; i++){
+    linksMenu[i].addEventListener('click', () => {
+        for(let j = 0; j < linksMenu.length; j++){
+            if(linksMenu[i] === linksMenu[j] && i === 1){
+                sectionContent[j].classList.remove('hide');
+                sectionFilter.classList.remove('hide');
+
+            } else if(linksMenu[i] === linksMenu[j]){
+                sectionContent[j].classList.remove('hide');
+                sectionFilter.classList.add('hide');
+            } else{
+                sectionContent[j].classList.add('hide');
+            }
+            
+        }
+    });
+}
+
 const articleDish = document.querySelector('.article-dish');
 const buttonHalfCircle = document.querySelector('.button-half-circle');
 
