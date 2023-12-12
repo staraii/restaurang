@@ -11,7 +11,11 @@ const buttonFooterOpener = document.querySelector('.button-footer-opener');
 let toggleLock = false;
 
 buttonHalfCircle.addEventListener('click', () => {
-    alert("Tillagd!");
+    footer.classList.toggle('footer-added');
+    setTimeout(() => {
+        footer.classList.toggle('footer-added');
+    }, 1000);
+    
 });
 
 menuButton.addEventListener('click', () => {
@@ -44,7 +48,7 @@ buttonFooterOpener.addEventListener('click', () => {
         
         footer.classList.toggle('footer-open');
         setTimeout(() => {        
-            buttonFooterOpener.innerText = "Titta vidare";  
+            buttonFooterOpener.innerText = "Tillbaka";  
             buttonFooterOpener.style.backgroundColor = "#FFCB47";
             buttonFooterOpener.style.color = "#2C4251";
         }, 1000);        
