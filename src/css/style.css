@@ -169,6 +169,7 @@ menu {
 
 
 menu li {
+  height: 18vh;
 	flex-grow: 1;
 	display: inline-block;
 	font-size: 3rem;
